@@ -1,0 +1,252 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #D4EBFD;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+p{
+  padding: 10px;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+:focus{
+  border: 2px solid black;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: none;
+  z-index: 1;
+}
+
+.skip a:focus{
+  top: auto;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / 7;
+  grid-row: 8 / -1;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 30px 100px 500px 8px;
+  grid-template-rows: 70px 400px 400px 300px 400px 300px 400px 70px;
+  width: 100vw;
+  grid-row-gap: 40px;
+}
+
+.nav{
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  background-color: #D4EBFD;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  align-self: center;
+
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/auditorium.jpg");
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  height: 400px;
+  grid-column: 2 / -1;
+  grid-row: 2 / span 1;
+}
+
+
+.about-image{
+  margin-left: 30px;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.about{
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.announcements{
+  grid-column: 2 / span 3;
+  grid-row: 4 / span 1;
+}
+
+.signup{
+ grid-column: 2 / span 1;
+ grid-row: 5 / span 1;
+}
+
+.sponsorship{
+  grid-column: 2 / span 2;
+  grid-row: 6 / span 1;
+}
+
+.sponsorship-image{
+  grid-column: 4 / span 1;
+  grid-row: 6 / span 1;
+  max-height: 400px;
+  overflow: hidden;
+  padding-left: 40px;
+}
+
+/*.gallery{
+  grid-column: 1 / -1;
+  grid-row: 7 / span 1;
+}*/
+
+.text-block{
+  grid-column: 2;
+  align-self: center;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid #2844C1;
+}
+
+
+
+@media screen and (min-width:800px){
+
+  .container{
+    display: grid;
+    grid-template-columns: 8px 400px 400px 400px;
+    grid-template-rows: 70px 400px 400px 300px 400px 300px 70px;
+  }
+
+  .nav{
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    text-align: right;
+    background-color: #D4EBFD;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+  }
+
+  .about-image{
+     grid-column: 2 / span 2;
+     grid-row: 3 / span 1;
+     max-height: 700px;
+     overflow: hidden;
+    }
+
+  .about{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  .announcements{
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 1;
+  }
+
+  .signup{
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+  .sponsorship{
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+  }
+
+/*  .gallery{
+    grid-column: 1 / -1;
+    grid-row: 7 / span 1;
+  } */
+
+  /*div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 180px;
+    grid-column: auto;
+    grid-row: 1 / span 1;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }*/
+
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+   }
+
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important; /* Your code here - set to default setting */
+    transition: none !important; /* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}

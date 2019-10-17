@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Contact Form</title>
+    <!-- BOOTSTRAP CDNs -->
+
+    <!-- FONT AWESOME -->
+
+    <style>
+        .header {
+            color: #2844C1;
+            font-size: 27px;
+            padding: 10px;
+        }
+        label{
+        	font-family: Open Sans;
+        }
+        .bigicon {
+            font-size: 35px;
+            color: #36A0FF;
+            padding-left:2%;
+        }
+        form div{
+            display:inline-block;
+            width: 90%;
+        }
+        button.btn{
+            display: block;
+            margin: 0 auto;
+        }
+        input:focus{
+        	background-color: #D4EBFD;
+        }
+
+</style>
+</head>
+<body>
+
+<!-- http://www.prepbootstrap.com/bootstrap-template/contact-form -->
+<main>
+    <h1>Contact the Senior Fashion Show Committee</h1>
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <legend class="text-center header">Your Contact Information</legend>
+
+        <div class="form-group">
+            <span><i class="fa fa-user bigicon"></i></span>
+            <div>
+                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <span><i class="fa fa-user bigicon"></i></span>
+            <div>
+                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span><i class="fa fa-paper-plane bigicon"></i></span>
+            <div>
+                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span><i class="fa fa-phone-square bigicon"></i></span>
+            <div>
+                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span><i class = "fas fa-pencil-alt bigicon"></i></span>
+            <div>
+                <textarea class="form-control" id="message" name="message" placeholder="Enter your message here. We will get back to you!"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                <button type="send" class="btn btn-primary btn-lg">Send</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</main>
+</body>
